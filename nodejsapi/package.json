@@ -1,0 +1,23 @@
+{
+  "name": "nodejsapi",
+  "version": "1.0.0",
+  "description": "Nodejs Mysql",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "NODE_ENV=dev nodemon src/index.js"
+  },
+  "author": "Timofejs Zaruns",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.3",
+    "ip": "^1.1.8",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
