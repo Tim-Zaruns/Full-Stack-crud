@@ -42,8 +42,9 @@ export const getUser = (req, res) => {
       res.status(HttpStatus.NOT_FOUND.code)
         .send(new Response(HttpStatus.NOT_FOUND.code, HttpStatus.NOT_FOUND.status, `User by id ${req.params.id} was not found`));
     } else {
+      const userData = results.map(({ password, ...rest }) => rest)
       res.status(HttpStatus.OK.code)
-        .send(new Response(HttpStatus.OK.code, HttpStatus.OK.status, `User retrieved`, results[0]));
+        .send(new Response(HttpStatus.OK.code, HttpStatus.OK.status, `User retrieved`, userData[0]));
     }
   });
 };
